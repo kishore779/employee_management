@@ -1,7 +1,7 @@
 app_name = "employee_management"
 app_title = "Employee Management"
 app_publisher = "Kishore"
-app_description = "System for Employee Management"
+app_description = "System for Emplyee management"
 app_email = "kishorepunniyamoorthi@gmail.com"
 app_license = "mit"
 

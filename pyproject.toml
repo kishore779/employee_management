@@ -3,7 +3,7 @@ name = "employee_management"
 authors = [
     { name = "Kishore", email = "kishorepunniyamoorthi@gmail.com"}
 ]
-description = "System for Employee Management"
+description = "System for Emplyee management"
 requires-python = ">=3.14"
 readme = "README.md"
 dynamic = ["version"]

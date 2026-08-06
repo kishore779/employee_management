@@ -1,6 +1,6 @@
 ### Employee Management
 
-System for Employee Management
+System for Emplyee management
 
 ### Installation
 
