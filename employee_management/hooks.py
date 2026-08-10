@@ -20,6 +20,11 @@ doc_events = {
      }
     
 }
+scheduler_events = {
+    "daily" : [
+        "employee_management.task.daily_maintenance"
+    ]
+}
 
 # Apps
 # ------------------
