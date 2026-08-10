@@ -1,6 +1,7 @@
 
 import frappe
 from frappe.query_builder import DocType
+from frappe.utils import now
 
 def greet(doc,method):
     frappe.msgprint("Employee Created Successfully!")
@@ -50,3 +51,27 @@ def hr_leave_summary():
         )
 
     return records
+
+@frappe.whitelist()
+def get_todo():
+    tasks = frappe.get_list("ToDo",
+                   fields = ["name", "description", "owner"])
+
+    results = []
+    for task in tasks:
+        owner = task.get("owner")
+        email = frappe.db.get_value("User",
+                                    owner,
+                                    "email")
+
+        if owner:
+            results.append({
+                "name" : task.name,
+                "description" : task.description,
+                "email" : email
+            })
+
+    return {
+        "timestamp" : frappe.utils.now(),
+        "results" : results
+    }
